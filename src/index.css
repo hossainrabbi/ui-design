@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --main-color: #673ab7;
+    --main-color-light: #e1d8f1;
+    --sidebar-color: #fcfbff;
+    --gray-color: Gray 3;
+    --transition: 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* Sidebar Component*/
+.sidebar {
+    background-color: var(--sidebar-color);
+    height: 100vh;
+}
+
+.sidebar-link {
+    color: var(--gray-color);
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: all var(--transition);
+}
+
+.sidebar-link:hover {
+    color: var(--main-color);
+    background-color: var(--main-color-light);
+}
+
+.sidebar-link span {
+    margin-left: 15px;
+}
+
+.sidebar-active {
+    color: var(--main-color);
+    background-color: var(--main-color-light);
 }
