@@ -5,6 +5,7 @@
     --main-color-light: #e1d8f1;
     --sidebar-color: #fcfbff;
     --gray-color: Gray 3;
+    --background-color: #ffffff;
     --transition: 0.3s;
 }
 
@@ -21,6 +22,26 @@ li {
 
 a {
     text-decoration: none !important;
+}
+
+/* Others */
+.mt-7 {
+    margin-top: 70px;
+}
+
+/* Navbar Component */
+.nav-bar {
+    background-color: var(--background-color);
+}
+
+.nav-bar .nav-link {
+    margin: 0 2px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-bar .nav-link span {
+    margin-left: 8px;
 }
 
 /* Sidebar Component*/

@@ -5,13 +5,8 @@ import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
-        <>
-            {/* <div className="logo">
-                <Link to="/" className="navbar-brand">
-                    <img src={logo} alt="Logo" />
-                </Link>
-            </div> */}
-            <ul className="sidebar">
+        <div className="sidebar">
+            <ul className="mt-7">
                 <li>
                     <NavLink
                         className="sidebar-link"
@@ -42,7 +37,7 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
             </ul>
-        </>
+        </div>
     );
 };
 

@@ -8,7 +8,9 @@ const AccessControl = () => {
             <Col md={3}>
                 <Sidebar />
             </Col>
-            <Col md={9}>hello world</Col>
+            <Col md={9} className="mt-7">
+                hello world
+            </Col>
         </Row>
     );
 };
