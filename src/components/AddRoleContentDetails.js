@@ -12,6 +12,8 @@ const permissions = [
 
 const AddRoleContentDetails = ({ title, access, updated }) => {
     const [showInfo, setShowInfo] = useState(false);
+    const [toggleChenge, settoggleChenge] = useState(true);
+
     return (
         <>
             <tr className="role-content-details text-center">
@@ -31,7 +33,13 @@ const AddRoleContentDetails = ({ title, access, updated }) => {
                     </div>
                 </td>
                 <td>
-                    <span className={access}>{access}</span>
+                    <span
+                        className={`${access} ${
+                            !toggleChenge ? 'disable' : ''
+                        }`}
+                    >
+                        {access}
+                    </span>
                 </td>
                 <td>
                     <button className="costomize-btn">View</button>
@@ -40,7 +48,16 @@ const AddRoleContentDetails = ({ title, access, updated }) => {
                     <button className="costomize-btn">Delete</button>
                 </td>
                 <td>{updated}</td>
-                <td></td>
+                <td>
+                    <label className="switch">
+                        <input
+                            type="checkbox"
+                            defaultChecked={toggleChenge ? true : ''}
+                            onClick={() => settoggleChenge(!toggleChenge)}
+                        />
+                        <span className="slider round"></span>
+                    </label>
+                </td>
             </tr>
             {showInfo && (
                 <tr>

@@ -5,6 +5,7 @@ export const addRole = [
         access: 'All Access',
         members: 4,
         updated: '1 min ago',
+        type: 'radio',
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ export const addRole = [
         access: 'Restricted Access',
         members: 8,
         updated: '1 min ago',
+        type: 'radio',
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ export const addRole = [
         access: 'Restricted Access',
         members: 16,
         updated: '1 min ago',
+        type: 'radio',
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ export const addRole = [
         access: 'Restricted Access',
         members: 4,
         updated: '1 min ago',
+        type: 'radio',
     },
     {
         id: 5,
@@ -33,6 +37,6 @@ export const addRole = [
         access: 'All Access',
         members: 1,
         updated: '1 min ago',
-        disabled: true,
+        type: 'text',
     },
 ];

@@ -54,6 +54,75 @@ a {
     background-color: var(--danger-color-light);
 }
 
+.disable {
+    color: var(--gray-color) !important;
+    background-color: var(--gray-color-light) !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-color-light);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 3px;
+    background-color: var(--background-color);
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--main-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--main-color);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 .link {
     color: var(--body-color);
 }
@@ -189,6 +258,13 @@ a {
 }
 
 /* Role Detail Component */
+.add-role input[type='text'].form-check-input {
+    border: none;
+    outline: none;
+    margin-top: 0;
+    margin-left: -1px;
+}
+
 .role-detail a {
     color: var(--main-color);
     margin-right: 10px;

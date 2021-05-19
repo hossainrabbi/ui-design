@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Row, Tab, Tabs } from 'react-bootstrap';
-import RoleDetails from './RoleDetails';
-import Sidebar from './Sidebar';
+import AddRole from '../components/AddRole';
+import Sidebar from '../components/Sidebar';
 
-const AccessControlDetails = () => {
+const AccessControl = () => {
     return (
-        <Row className="access-control-details">
+        <Row>
             <Col md={3}>
                 <div className="position-relative">
                     <Sidebar />
@@ -18,7 +18,7 @@ const AccessControlDetails = () => {
                     id="tab"
                 >
                     <Tab eventKey="permissions" title="Permissions">
-                        <RoleDetails />
+                        <AddRole />
                     </Tab>
                     <Tab
                         eventKey="approvalMatrix"
@@ -30,4 +30,4 @@ const AccessControlDetails = () => {
     );
 };
 
-export default AccessControlDetails;
+export default AccessControl;
