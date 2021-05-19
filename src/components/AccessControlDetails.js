@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 
 const AccessControlDetails = () => {
     return (
-        <Row>
+        <Row className="access-control-details">
             <Col md={3}>
                 <div className="position-relative">
                     <Sidebar />

@@ -107,6 +107,7 @@ a {
     height: 100vh;
     position: fixed;
     left: 0;
+    width: 290px;
 }
 
 .sidebar-link {
@@ -169,12 +170,23 @@ a {
     border-top-left-radius: var(--radius);
 }
 
-/* .tabs-item .nav-link::before {
+.tabs-item .nav-link:first-child::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    content: '\f007';
+    content: '\f09e';
     margin-right: 8px;
-} */
+}
+
+.tabs-item .nav-link:last-child::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f00a';
+    margin-right: 8px;
+}
+
+.role-detail .tabs-item .nav-link::before {
+    content: '';
+}
 
 /* Role Detail Component */
 .role-detail a {

@@ -1,4 +1,8 @@
-import { faTasks } from '@fortawesome/free-solid-svg-icons';
+import {
+    faProjectDiagram,
+    faShoppingBag,
+    faThLarge,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -13,7 +17,8 @@ const Sidebar = () => {
                         to="/projects"
                         activeClassName="sidebar-active"
                     >
-                        <FontAwesomeIcon icon={faTasks} /> <span>Projects</span>
+                        <FontAwesomeIcon icon={faThLarge} />
+                        <span>Projects</span>
                     </NavLink>
                 </li>
                 <li>
@@ -22,7 +27,7 @@ const Sidebar = () => {
                         to="/organisationProfile"
                         activeClassName="sidebar-active"
                     >
-                        <FontAwesomeIcon icon={faTasks} />
+                        <FontAwesomeIcon icon={faShoppingBag} />
                         <span>Organisation Profile</span>
                     </NavLink>
                 </li>
@@ -32,7 +37,7 @@ const Sidebar = () => {
                         to="/accessControl"
                         activeClassName="sidebar-active"
                     >
-                        <FontAwesomeIcon icon={faTasks} />
+                        <FontAwesomeIcon icon={faProjectDiagram} />
                         <span>Access Control</span>
                     </NavLink>
                 </li>
