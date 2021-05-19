@@ -16,7 +16,7 @@ const AddRoleContent = ({ id, title, access, members, updated, disabled }) => {
                         value={title}
                         disabled={disabled && 'disabled'}
                     />
-                    <label className="form-check-label" for={id}>
+                    <label className="form-check-label" htmlFor={id}>
                         {title}
                     </label>
                 </div>

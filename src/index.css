@@ -5,7 +5,7 @@
     --main-color-light: #e1d8f1;
     --sidebar-color: #fcfbff;
     --gray-color: #808080;
-    --gray-color-light: #b9b9b9;
+    --gray-color-light: #dee2e6;
     --background-color: #ffffff;
     --body-color: #444444;
     --danger-color: #dd0303;
@@ -34,7 +34,7 @@ a {
     text-decoration: none !important;
 }
 
-/* Others */
+/* Common Styles */
 .mt-7 {
     margin-top: 70px;
 }
@@ -56,6 +56,34 @@ a {
 
 .link {
     color: var(--body-color);
+}
+
+.role-btn button {
+    border: none;
+    padding: 5px 14px;
+    margin-right: 5px;
+    border-radius: var(--radius);
+    transition: all var(--transition);
+    color: var(--gray-color);
+    background-color: transparent;
+}
+
+.role-btn button:first-child {
+    color: var(--background-color);
+    background-color: var(--main-color);
+}
+
+.role-btn button:hover {
+    color: var(--background-color);
+    background-color: var(--main-color);
+}
+
+.role-btn button span {
+    margin-left: 8px;
+}
+
+.light-gray-color {
+    color: var(--gray-color-light);
 }
 
 /* Navbar Component */
@@ -141,34 +169,53 @@ a {
     border-top-left-radius: var(--radius);
 }
 
-.tabs-item .nav-link::before {
+/* .tabs-item .nav-link::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f007';
     margin-right: 8px;
+} */
+
+/* Role Detail Component */
+.role-detail a {
+    color: var(--main-color);
+    margin-right: 10px;
+    display: inline-block;
 }
 
-/* Add Role Component */
-.add-role .role-btn button {
+.role-detail .tabs-item .nav-link.active::after {
+    height: 3px;
+}
+
+/* role-table-details */
+.role-table-details .table {
+    margin-bottom: 0;
+}
+
+.role-table-details .info {
+    border: 1px solid var(--gray-color-light);
+    padding: 5px 10px;
+    margin-top: -1px;
+}
+
+.role-content-details .costomize-btn {
     border: none;
-    padding: 5px 14px;
-    margin-right: 5px;
-    border-radius: var(--radius);
-    transition: all var(--transition);
-    color: var(--gray-color);
     background-color: transparent;
+    border-right: 1px solid var(--gray-color-light);
+    padding: 0 5px;
+    margin: 0;
 }
 
-.add-role .role-btn button:first-child {
-    color: var(--background-color);
-    background-color: var(--main-color);
+.role-content-details .costomize-btn:last-child {
+    border-right: none;
 }
 
-.add-role .role-btn button:hover {
-    color: var(--background-color);
-    background-color: var(--main-color);
+.role-content-details .form-check {
+    display: flex;
+    align-items: center;
 }
 
-.add-role .role-btn button span {
-    margin-left: 8px;
+/* AddRole Content Details */
+.access-control {
+    border-right: 1px solid var(--gray-color-light);
 }

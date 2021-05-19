@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AccessControl from './components/AccessControl';
+import AccessControlDetails from './components/AccessControlDetails';
 import NavBar from './components/NavBar';
 import Sidebar from './components/Sidebar';
 
@@ -10,8 +11,11 @@ function App() {
             <NavBar />
             <Switch>
                 <Route exact path="/" component={Sidebar} />
-                <Route path="/accessControl" component={AccessControl} />
-                <Route path="/accessControl/:id" component={AccessControl} />
+                <Route exact path="/accessControl" component={AccessControl} />
+                <Route
+                    path="/accessControl/:id"
+                    component={AccessControlDetails}
+                />
             </Switch>
         </Router>
     );
