@@ -7,7 +7,9 @@ const AccessControl = () => {
     return (
         <Row>
             <Col md={3}>
-                <Sidebar />
+                <div className="position-relative">
+                    <Sidebar />
+                </div>
             </Col>
             <Col md={9} className="mt-7">
                 <Tabs

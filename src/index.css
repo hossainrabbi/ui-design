@@ -8,6 +8,10 @@
     --gray-color-light: #b9b9b9;
     --background-color: #ffffff;
     --body-color: #444444;
+    --danger-color: #dd0303;
+    --danger-color-light: #dd03032a;
+    --success-color: #01a101;
+    --success-color-light: #01a1012b;
     --transition: 0.3s;
     --radius: 5px;
 }
@@ -15,6 +19,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    font-size: 16px;
+    color: var(--body-color);
+    background-color: var(--background-color);
 }
 
 ul,
@@ -30,6 +37,25 @@ a {
 /* Others */
 .mt-7 {
     margin-top: 70px;
+}
+
+.Access {
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+.All.Access {
+    color: var(--success-color);
+    background-color: var(--success-color-light);
+}
+
+.Restricted.Access {
+    color: var(--danger-color);
+    background-color: var(--danger-color-light);
+}
+
+.link {
+    color: var(--body-color);
 }
 
 /* Navbar Component */
@@ -51,6 +77,8 @@ a {
 .sidebar {
     background-color: var(--sidebar-color);
     height: 100vh;
+    position: fixed;
+    left: 0;
 }
 
 .sidebar-link {
@@ -59,6 +87,7 @@ a {
     display: inline-block;
     width: 100%;
     padding: 10px;
+    padding-right: 30px;
     margin-bottom: 5px;
     transition: all var(--transition);
 }

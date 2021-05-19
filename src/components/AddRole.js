@@ -2,6 +2,7 @@ import { faPen, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import AddRoleTable from './AddRoleTable';
 
 const AddRole = () => {
     return (
@@ -18,6 +19,7 @@ const AddRole = () => {
                     <FontAwesomeIcon icon={faTrash} />
                 </button>
             </div>
+            <AddRoleTable className="mt-3" />
         </Container>
     );
 };

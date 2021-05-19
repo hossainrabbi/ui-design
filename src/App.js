@@ -10,7 +10,8 @@ function App() {
             <NavBar />
             <Switch>
                 <Route exact path="/" component={Sidebar} />
-                <Route exact path="/accessControl" component={AccessControl} />
+                <Route path="/accessControl" component={AccessControl} />
+                <Route path="/accessControl/:id" component={AccessControl} />
             </Switch>
         </Router>
     );
