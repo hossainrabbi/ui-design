@@ -1,5 +1,6 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Tab, Tabs } from 'react-bootstrap';
+import AddRole from './AddRole';
 import Sidebar from './Sidebar';
 
 const AccessControl = () => {
@@ -9,7 +10,19 @@ const AccessControl = () => {
                 <Sidebar />
             </Col>
             <Col md={9} className="mt-7">
-                hello world
+                <Tabs
+                    className="tabs-item"
+                    defaultActiveKey="permissions"
+                    id="tab"
+                >
+                    <Tab eventKey="permissions" title="Permissions">
+                        <AddRole />
+                    </Tab>
+                    <Tab
+                        eventKey="approvalMatrix"
+                        title="Approval Matrix"
+                    ></Tab>
+                </Tabs>
             </Col>
         </Row>
     );
